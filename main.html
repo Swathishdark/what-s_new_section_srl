@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <title>Notification Card</title>
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 210px;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            background-color: none; /* Soft background color */
+        }
+        .new-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f44336; /* Red color for visibility */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .notification-card {
+            position: relative; /* Required for absolute positioning of the new tag */
+            margin-right: 15px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            width: 490px;
+            height: 200px;
+            background: linear-gradient(to right, #004246, #02BF91);
+            color: white;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .notification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+        }
+        .notification-card img {
+            border-radius: 15px 0 0 15px;
+            width: 250px;
+            height: auto;
+            margin-top: 37px;
+            transition: transform 0.5s ease;
+        }
+        .notification-card:hover img {
+            transform: scale(1.05);
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .text-content h2 {
+            margin-left: 26px;
+            font-size: 21px;
+            color: #fff;
+        }
+        .text-content h3 {
+            margin: 10px 0px;
+            font-size: 18px;
+            color: #bbe1fa;
+        }
+        .text-content p {
+            font-size: 12px;
+            color: #a4ebf3;
+            margin:px;
+        }
+        @media (max-width: 600px) {
+            .notification-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .notification-card img {
+                width: auto;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+        .click-button {
+            display: inline-block;
+            padding: 10px 10px;
+            background: linear-gradient(to right, #F2F62E, #57F49E);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: medium;
+            border-radius: 5px;
+            color:#004246;
+            transition: background 0.3s, transform 0.2s;
+            margin-left:100px;
+        }
+        .click-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/face402c-4029-4130-9c7b-d470a1006348.webp" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Sales Assets</h2>
+        <p>with user message template and copy to clipboard feature</p>
+        <!-- Button for New Assets -->
+        <a href="https://sites.google.com/criodo.com/sales-resources/sales-assets-creatives" id="new-assets-button" class="click-button">Checkout</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/c9d118a8-e995-4701-814f-e0b3833fac4f.webp" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Success Stories</h2>
+        <p>Find all our recently placed graduates in one place.</p>
+        <!-- Button for Success Stories -->
+        <a href="https://sites.google.com/criodo.com/sales-resources/success-stories" id="success-stories-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/dd38ee29-46ed-41ae-acdb-75ab39013526.webp" style="margin-top:10px;" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Enablement Videos</h2>
+        <p>Here, you can find sales enablement videos</p>
+        <!-- Button for Placement Stats Brochure -->
+        <a href="https://sites.google.com/criodo.com/sales-resources/shareable-videos-new" target="_blank" id="sales-enablement-videos" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/a3f12389-511f-4af7-a978-e6d8dcfdec22.webp" style="margin-top:10px;" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Placement Stat Dashboard</h2>
+        <p>View the Total Opportunities & CTC achieved by Crio Do learners</p>
+        <!-- Button for Placement Stats Brochure -->
+        <a href="https://www.crio.do/magic/crio-placement-stats" target="_blank" id="placement-stats-dashboard-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/583ef0db-0103-4756-af54-8a4bf48b254d.webp" style="margin-top:10px;" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Placement Stat Brochure</h2>
+        <p>with new stats, top alumni reviews and our top hiring partners</p>
+        <!-- Button for Placement Stats Brochure -->
+        <a href="https://rebrand.ly/Crio_Placement_Stats" target="_blank" id="placement-stats-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/2700932b-2aa5-4a66-a72f-a4496842c0f0.webp" style="margin-top:10px;" alt="roi-calculator">
+    <div class="text-content">
+        <h2>ROI Calculator</h2>
+        <p>To calculate learners hike in salary, hike percentage, and the time required to earn back the fee.</p>
+        <!-- Button for ROI Calculator -->
+        <a href="https://www.crio.do/roi-calculator" target="_blank" id="roi-calculator" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/e6957927-f24e-46df-9154-9d959c688ce7.webp" style="margin-top:15px;width:50%;height:auto;" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Crio.Do <br>Career Transitions</h2>
+        <p>Where you can find the database of our placed learners..</p>
+        <!-- Button for Career Transitions -->
+        <a href="https://www.crio.do/learn/career-transitions/" target="_blank" id="career-transition-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/9be7d44e-4963-4530-9f3d-86f4b52d7ac3.webp" style="object-fit: cover; margin-bottom: 75px;" alt="New Assets Image">
+    <div class="text-content">
+        <h2>Crio.Do <br>LinkedIn Posts</h2>
+        <p>Where you can find all the learners' posted LinkedIn posts in one place.</p>
+        <!-- Button for LinkedIn Posts -->
+        <a href="https://sites.google.com/criodo.com/sales-resources/linkedin-posts" target="_blank" id="linkedin-posts-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/0ce18d4c-c7ad-4b25-b760-9c7a9e98e1bd.png" style="margin-bottom:-7px;" alt="Crio.Do Google Reviews">
+    <div class="text-content">
+        <h2>Crio.Do <br>Google Reviews</h2>
+        <p>Where you can find all the Google Reviews in one place.</p>
+        <!-- Button for Google Reviews -->
+        <a href="https://docs.google.com/spreadsheets/d/1ikgl08t-P7828UbR2Nr4WakzwwWhXmWIScJccZdGQrI/edit#gid=0" target="_blank" id="google-reviews-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<div class="notification-card">
+    <img src="https://directus.crio.do/assets/dd38ee29-46ed-41ae-acdb-75ab39013526.webp" alt="Sharable Videos">
+    <div class="text-content">
+        <h2>Crio.Do <br>Sharable Videos</h2>
+        <p>Where you can find our sharable videos in one place.</p>
+        <a href="https://sites.google.com/criodo.com/sales-resources/sharable-videos" target="_blank" id="sharable-videos-button" class="click-button">Click Here</a>
+    </div>
+</div>
+<script>
+    function sendDataToGoogleSheet(optionId) {
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbzNy8Mx7XWrdmtMtxmERAxUMWgrIWRyUDV9tTefroRGsQ1W_KQR-YW6NyMDwOFqC3cPOw/exec';
+        const now = new Date();
+        const dateTime = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} / ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+
+        let identifier = '';
+
+        switch (optionId) {
+            case 'new-assets-button':
+                identifier = 'New Assets';
+                break;
+            case 'success-stories-button':
+                identifier = 'Success Stories';
+                break;
+            case 'sales-enablement-videos':
+                identifier = 'Enablement Videos';
+                break;
+            case 'placement-stats-button':
+                identifier = 'Placement Stats Brochure';
+                break;
+            case 'roi-calculator':
+                identifier = 'ROI Calculator';
+                break;
+            case 'placement-stats-dashboard-button':
+                identifier = 'Placement Stats Dashboard';
+                break;
+            case 'career-transition-button':
+                identifier = 'Career Transition';
+                break;
+            case 'linkedin-posts-button':
+                identifier = 'LinkedIn Posts';
+                break;
+            case 'google-reviews-button':
+                identifier = 'Google Reviews';
+                break;
+            case 'sharable-videos-button':
+                identifier = 'Sharable Videos';
+                break;
+            default:
+                console.error('Unknown option ID:', optionId);
+                return;
+        }
+
+        const data = {
+            eventType: 'click',
+            identifier: identifier,
+            optionId: optionId,
+            dateTime: dateTime
+        };
+        fetch(scriptUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => console.log('Data sent:', data))
+        .catch(error => console.error('Error:', error));
+    }
+
+    document.querySelectorAll('.click-button').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.stopPropagation();
+            sendDataToGoogleSheet(this.id);
+        });
+    });
+</script>
+</body>
+</html>
